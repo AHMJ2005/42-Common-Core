@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,22 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 #incldue "libft.h"
-size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	unsigned int	res;
-
-	i = 0;
-	res = 0;
-	while (src[res])
-		res++;
-	if (size < 1)
-		return (res);
-	while (src[i] && i < size - 1)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (res);
+void *ft_memmove(void *dest, const void *src, unsigned int n) {
+    unsigned char *d;
+    unsigned char *s;
+    size_t  i;
+    i = 0;
+    d = (unsigned char *)dest;
+    s = (unsigned char *)src;
+    if (!dest && !src)
+        return (0);
+    if (d > s) {
+        while (n-- > 0) {
+            d[n] = s[n];
+        }
+    }else {
+        while (i < n) {
+           d[i] = s[i];
+            i++;
+        }
+    }
+    return (dest);
 }

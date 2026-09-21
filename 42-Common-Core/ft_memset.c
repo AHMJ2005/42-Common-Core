@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, int n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	if (s == 0)
-
+	if (!s)
 		return (0);
+	unsigned char	*ptr = (unsigned char *)s;
 	while (n--)
 	{
-		*(char *) s = c;
-		s++;
+		*ptr = (unsigned char)c;
+		ptr++;
 	}
-	return s;
+	return (s);
 }

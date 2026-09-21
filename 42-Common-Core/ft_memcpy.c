@@ -9,17 +9,18 @@
 /*   Updated: 2026/09/20 16:34:31 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#incldue "libft.h"
 void *ft_memcpy(void *dest, const void *src, int n){
       
-       if (src == 0)
-              return 0;
-
+       if (!dest && !src)
+	       return 0;
+       unsigned char *d = dest;
+       const unsigned char 	*s = src;
        while (n--)
        {
-              *(char *)dest = *(char *) src;
-              dest++;
-              src++; 
+              *d = *s;
+              s++;
+              d++; 
        }
-       return dest;
+       return (dest);
 }

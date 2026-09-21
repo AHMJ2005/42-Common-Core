@@ -9,11 +9,9 @@
 /*   Updated: 2026/09/20 16:46:07 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int ft_strlen(const char *s)
+#incldue "libft.h"
+size_t ft_strlen(const char *s)
 {
-	if (*s == '\0')
-		return 0;
 	int i = 0;
 	while(s[i] != '\0')
 	{
