@@ -9,8 +9,8 @@
 /*   Updated: 2026/04/14 20:33:02 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#incldue "libft.h"
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+int	ft_strncmp(const char *s1,const char *s2, size_t n)
 {
 	unsigned int	i;
 

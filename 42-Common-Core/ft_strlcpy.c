@@ -9,8 +9,8 @@
 /*   Updated: 2026/04/09 15:55:52 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#incldue "libft.h"
-size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "libft.h"
+size_t	ft_strlcpy(char *dest,const char *src, size_t size)
 {
 	unsigned int	i;
 	unsigned int	res;

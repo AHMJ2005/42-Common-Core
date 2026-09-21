@@ -9,13 +9,12 @@
 /*   Updated: 2026/09/20 16:09:03 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#incldue "libft.h"
-int ft_isalnum(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-	if (c > 0 && c <= 9 || c >= 'a' && c <= 'z'
-			|| c >= 'A' && c <= 'Z')
-	{
+	if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z'))
 		return (1);
-	}
 	return (0);
 }

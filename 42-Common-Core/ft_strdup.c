@@ -6,14 +6,14 @@ char    *ft_strdup(const char *s)
     int		i;
 
     i = 0;
-    if (src == NULL)
+    if (!s)
         return (0);
-    p = malloc(1 * (ft_strlen(src) + 1));
+    p = (char *)malloc(1 * (ft_strlen(s) + 1));
     if (!p)
-        return (NULL);
-    while (src[i] != '\0')
+        return (0);
+    while (s[i] != '\0')
     {
-        p[i] = src[i];
+        p[i] = s[i];
         i++;
     }
     p[i] = '\0';
