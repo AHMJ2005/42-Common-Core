@@ -1,21 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/08 18:09:20 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/04/14 20:33:02 by aabu-jwe         ###   ########.fr       */
+/*   Created: 2026/09/22 10:12:59 by aabu-jwe          #+#    #+#             */
+/*   Updated: 2026/09/22 10:13:01 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
-int	ft_strncmp(const char *s1,const char *s2, size_t n)
-{
-	unsigned int	i;
 
-	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n)
-		i++;
-	return (s1[i] - s2[i]);
+#include "libft.h"
+
+void	ft_putnbr_fd(int nb, int fd)
+{
+    char	c;
+
+    if (fd < 0)
+        return ;
+    if (nb == -2147483648)
+    {
+        write(fd, "-2147483648", 11);
+        return ;
+    }
+    if (nb < 0)
+    {
+        write(fd, "-", 1);
+        nb = -nb;
+    }
+    if (nb >= 10)
+        ft_putnbr_fd(nb / 10, fd);
+    c = (nb % 10) + '0';
+    write(fd, &c, 1);
 }

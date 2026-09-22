@@ -5,10 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/09 15:52:26 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/04/09 15:55:52 by aabu-jwe         ###   ########.fr       */
+/*   Created: 2026/09/22 10:26:28 by aabu-jwe          #+#    #+#             */
+/*   Updated: 2026/09/22 10:26:29 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 #include "libft.h"
 size_t	ft_strlcpy(char *dest,const char *src, size_t size)
 {
