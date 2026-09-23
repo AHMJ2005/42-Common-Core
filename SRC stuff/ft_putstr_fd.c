@@ -6,13 +6,14 @@
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 10:13:32 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/22 10:13:34 by aabu-jwe         ###   ########.fr       */
+/*   Updated: 2026/09/23 14:18:56 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd) {
-    if (fd)
-        write(fd, s, ft_strlen(s));
+void	ft_putstr_fd(char *s, int fd)
+{
+	if (fd)
+		write(fd, s, ft_strlen(s));
 }

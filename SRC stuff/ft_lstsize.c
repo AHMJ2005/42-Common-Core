@@ -6,12 +6,12 @@
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 13:33:58 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/22 14:34:46 by aabu-jwe         ###   ########.fr       */
+/*   Updated: 2026/09/23 14:53:56 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	size;
 

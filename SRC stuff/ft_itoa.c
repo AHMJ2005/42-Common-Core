@@ -6,21 +6,21 @@
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 13:07:59 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/22 13:15:21 by aabu-jwe         ###   ########.fr       */
+/*   Updated: 2026/09/23 14:43:52 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static int	size_N(long n)
+int	get_size_num(long nq)
 {
 	int	len;
 
 	len = 0;
-	if (n <= 0)
+	if (nq <= 0)
 		len = 1;
-	while (n != 0)
+	while (nq != 0)
 	{
-		n /= 10;
+		nq /= 10;
 		len++;
 	}
 	return (len);
@@ -33,7 +33,7 @@ char	*ft_itoa(int n)
 	int		len;
 
 	nb = n;
-	len = size_N(nb);
+	len = size_Num(nb);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return ('\0');
@@ -48,7 +48,7 @@ char	*ft_itoa(int n)
 	while (nb > 0)
 	{
 		str[--len] = (nb % 10) + '0';
-		nb /= 10;
+		nb = nb / 10;
 	}
 	return (str);
 }

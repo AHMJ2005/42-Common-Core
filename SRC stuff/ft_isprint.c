@@ -6,15 +6,14 @@
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 15:44:15 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/20 15:52:45 by aabu-jwe         ###   ########.fr       */
+/*   Updated: 2026/09/23 13:45:24 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-	{
-		return 1;
-	}
-	return 0;
+		return (1);
+	return (0);
 }

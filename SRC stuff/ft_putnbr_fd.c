@@ -6,7 +6,7 @@
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 10:12:59 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/22 10:13:01 by aabu-jwe         ###   ########.fr       */
+/*   Updated: 2026/09/23 14:18:05 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-    char	c;
+	char	c;
 
-    if (fd < 0)
-        return ;
-    if (nb == -2147483648)
-    {
-        write(fd, "-2147483648", 11);
-        return ;
-    }
-    if (nb < 0)
-    {
-        write(fd, "-", 1);
-        nb = -nb;
-    }
-    if (nb >= 10)
-        ft_putnbr_fd(nb / 10, fd);
-    c = (nb % 10) + '0';
-    write(fd, &c, 1);
+	if (fd < 0)
+		return ;
+	if (nb == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (nb < 0)
+	{
+		write(fd, "-", 1);
+		nb = -nb;
+	}
+	if (nb >= 10)
+		ft_putnbr_fd(nb / 10, fd);
+	c = (nb % 10) + '0';
+	write(fd, &c, 1);
 }

@@ -6,11 +6,12 @@
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 11:37:38 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/22 12:18:07 by aabu-jwe         ###   ########.fr       */
+/*   Updated: 2026/09/23 15:16:51 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char *ft_substr(char const *s, unsigned int start, size_t len)
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
 	size_t	s_len;

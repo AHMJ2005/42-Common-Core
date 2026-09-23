@@ -6,13 +6,13 @@
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 13:19:45 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/22 14:20:38 by aabu-jwe         ###   ########.fr       */
+/*   Updated: 2026/09/23 14:53:30 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;
 

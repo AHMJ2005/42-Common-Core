@@ -6,10 +6,11 @@
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 12:21:33 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/22 13:06:49 by aabu-jwe         ###   ########.fr       */
+/*   Updated: 2026/09/23 15:16:10 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;

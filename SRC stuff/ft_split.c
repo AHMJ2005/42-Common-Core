@@ -5,15 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/22 10:11:46 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/22 10:18:24 by aabu-jwe         ###   ########.fr       */
+/*   Created: 2026/09/23 14:55:14 by aabu-jwe          #+#    #+#             */
+/*   Updated: 2026/09/23 15:00:12 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-static size_t	count_words(char const *s, char c)
+size_t	count_words(char const *s, char c)
 {
 	size_t	count;
 	int		in_word;
@@ -34,7 +33,7 @@ static size_t	count_words(char const *s, char c)
 	return (count);
 }
 
-static void	free_all(char **tab, size_t i)
+void	free_all(char **tab, size_t i)
 {
 	while (i > 0)
 	{
@@ -44,7 +43,7 @@ static void	free_all(char **tab, size_t i)
 	free(tab);
 }
 
-static char	*word_dup(char const *s, size_t start, size_t end)
+char	*word_dup(char const *s, size_t start, size_t end)
 {
 	char	*word;
 	size_t	i;
@@ -66,15 +65,15 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 	int		start;
 
+	i = 0;
+	j = 0;
+	start = -1;
 	if (!s)
 		return (NULL);
 	tab = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!tab)
 		return (NULL);
-	i = 0;
-	j = 0;
-	start = -1;
-	while (i <= ft_strlen(s))
+	while (i++ <= ft_strlen(s))
 	{
 		if (s[i] != c && start < 0)
 			start = i;
@@ -86,7 +85,6 @@ char	**ft_split(char const *s, char c)
 			j++;
 			start = -1;
 		}
-		i++;
 	}
 	tab[j] = NULL;
 	return (tab);

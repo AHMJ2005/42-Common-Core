@@ -6,12 +6,12 @@
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 13:28:11 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/22 14:38:32 by aabu-jwe         ###   ########.fr       */
+/*   Updated: 2026/09/23 14:45:12 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
 		return ;

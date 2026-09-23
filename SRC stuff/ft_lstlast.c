@@ -6,12 +6,12 @@
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 13:36:33 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/22 13:46:10 by aabu-jwe         ###   ########.fr       */
+/*   Updated: 2026/09/23 14:49:46 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);
