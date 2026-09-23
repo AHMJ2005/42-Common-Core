@@ -5,87 +5,56 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/23 14:55:14 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/23 15:00:12 by aabu-jwe         ###   ########.fr       */
+/*   Created: 2026/09/23 16:23:16 by aabu-jwe          #+#    #+#             */
+/*   Updated: 2026/09/23 16:23:25 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	count_words(char const *s, char c)
+static size_t	ft_countword(char const *s, char c)
 {
 	size_t	count;
-	int		in_word;
 
+	if (!*s)
+		return (0);
 	count = 0;
-	in_word = 0;
 	while (*s)
 	{
-		if (*s != c && !in_word)
-		{
-			in_word = 1;
+		while (*s == c)
+			s++;
+		if (*s)
 			count++;
-		}
-		else if (*s == c)
-			in_word = 0;
-		s++;
+		while (*s != c && *s)
+			s++;
 	}
 	return (count);
 }
 
-void	free_all(char **tab, size_t i)
-{
-	while (i > 0)
-	{
-		i--;
-		free(tab[i]);
-	}
-	free(tab);
-}
-
-char	*word_dup(char const *s, size_t start, size_t end)
-{
-	char	*word;
-	size_t	i;
-
-	word = (char *)malloc(sizeof(char) * (end - start + 1));
-	if (!word)
-		return (NULL);
-	i = 0;
-	while (start < end)
-		word[i++] = s[start++];
-	word[i] = '\0';
-	return (word);
-}
-
 char	**ft_split(char const *s, char c)
 {
-	char	**tab;
-	size_t	i;
-	size_t	j;
-	int		start;
+	char	**lst;
+	size_t	word_len;
+	int		i;
 
+	lst = (char **)malloc((ft_countword(s, c) + 1) * sizeof(char *));
+	if (!s || !lst)
+		return (0);
 	i = 0;
-	j = 0;
-	start = -1;
-	if (!s)
-		return (NULL);
-	tab = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!tab)
-		return (NULL);
-	while (i++ <= ft_strlen(s))
+	while (*s)
 	{
-		if (s[i] != c && start < 0)
-			start = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && start >= 0)
+		while (*s == c && *s)
+			s++;
+		if (*s)
 		{
-			tab[j] = word_dup(s, start, i);
-			if (!tab[j])
-				return (free_all(tab, j), NULL);
-			j++;
-			start = -1;
+			if (!ft_strchr(s, c))
+				word_len = ft_strlen(s);
+			else
+				word_len = ft_strchr(s, c) - s;
+			lst[i++] = ft_substr(s, 0, word_len);
+			s += word_len;
 		}
 	}
-	tab[j] = NULL;
-	return (tab);
+	lst[i] = NULL;
+	return (lst);
 }

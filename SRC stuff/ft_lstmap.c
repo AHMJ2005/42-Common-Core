@@ -6,7 +6,7 @@
 /*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 14:50:11 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/23 14:52:49 by aabu-jwe         ###   ########.fr       */
+/*   Updated: 2026/09/23 15:56:27 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		content = f(lst->content);
-		N_node = ft_lstnew(content);
-		if (!N_node)
+		n_node = ft_lstnew(content);
+		if (!n_node)
 		{
 			del(content);
 			ft_lstclear(&res_list, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&res_list, N_node);
+		ft_lstadd_back(&res_list, n_node);
 		lst = lst->next;
 	}
 	return (res_list);
