@@ -9,21 +9,17 @@
 /*   Updated: 2026/09/22 14:34:46 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-unsigned int ft_lstsize(t_list *lst)
+int ft_lstsize(t_list *lst)
 {
-	int size;
-	t_list *tp;
+	int	size;
 
 	size = 0;
-	if (!lst)
-		return ;
-
-	while(!tp)
+	while (lst)
 	{
-		tp = tp->next;
 		size++;
+		lst = lst->next;
 	}
-
 	return (size);
 }

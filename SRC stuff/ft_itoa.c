@@ -9,17 +9,46 @@
 /*   Updated: 2026/09/22 13:15:21 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-char *ft_itoa(int n)
+static int	size_N(long n)
 {
-	int isN;
+	int	len;
 
-	isN = 1;
+	len = 0;
+	if (n <= 0)
+		len = 1;
+	while (n != 0)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}
 
-	if (n == 0)
-		return '\0';
+char	*ft_itoa(int n)
+{
+	char	*str;
+	long	nb;
+	int		len;
 
-	char *rse;
-
-	res = (char *)malloc()
+	nb = n;
+	len = size_N(nb);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return ('\0');
+	str[len] = '\0';
+	if (nb == 0)
+		str[0] = '0';
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb = -nb;
+	}
+	while (nb > 0)
+	{
+		str[--len] = (nb % 10) + '0';
+		nb /= 10;
+	}
+	return (str);
 }

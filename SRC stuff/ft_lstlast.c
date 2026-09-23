@@ -9,18 +9,13 @@
 /*   Updated: 2026/09/22 13:46:10 by aabu-jwe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 t_list *ft_lstlast(t_list *lst)
 {
-	t_list *ptr;
-
-	ptr = lst;
-	while(ptr->next->next != '\0')
-	{
-		ptr = ptr->next;
-
-	}
-
-	return ptr;
-
+	if (!lst)
+		return (NULL);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

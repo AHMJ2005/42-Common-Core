@@ -10,57 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-
-int check(char a, char *s)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int i;
-	int b = 0;
+	size_t	start;
+	size_t	end;
 
-	i = 0;
-	while(s[i] != '\0')
-	{
-		if (a == s[i])
-			b = 1;
-		else 
-			b = 0;
-		i++;
-	}
-	return (b);
-}
-char *ft_strtrim(char const *s1, char const *set)
-{
-	char *res;
-	char *s1U;
-	char *setU;
-	unsigned int i;
-	int a;
-	int size;
-
-	a = 0;
-	s1U = ft_strdup(s1);
-	setU = ft_strdup(set);
-	size = ft_strlen(s1) - ft_strlen(set);
-	res = (char *)malloc(size + 1);
-	i = 0;
-	if (!res)
-		return 0;
-	while (s1U[i++] != '\0')
-	{
-		if(!check(s1U[i] , setU))
-		{
-			res[a] = s1U[i];
-			a++;
-		}
-	}
-	res[i] = '\0';
-	return res;
-}
-int main()
-{
-	char *a;
-	a = ft_strtrim("::::ahm:::ad" , ":");
-	printf("%s" , a);
-	return 0;
+	if (!s1 || !set)
+		return (NULL);
+	start = 0;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_strchr(set, s1[end - 1]))
+		end--;
+	return (ft_substr(s1, start, end - start));
 }

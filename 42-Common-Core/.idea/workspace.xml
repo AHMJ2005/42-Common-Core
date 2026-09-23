@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d16f9536-c1f9-4a9b-b33c-ebd007730e0e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../SRC stuff/ft_lstclear.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SRC stuff/ft_lstdelone.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SRC stuff/ft_lstadd_back.c" beforeDir="false" afterPath="$PROJECT_DIR$/../SRC stuff/ft_lstadd_back.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SRC stuff/ft_lstadd_front.c" beforeDir="false" afterPath="$PROJECT_DIR$/../SRC stuff/ft_lstadd_front.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SRC stuff/ft_lstlast.c" beforeDir="false" afterPath="$PROJECT_DIR$/../SRC stuff/ft_lstlast.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SRC stuff/ft_lstnew.c" beforeDir="false" afterPath="$PROJECT_DIR$/../SRC stuff/ft_lstnew.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SRC stuff/ft_lstsize.c" beforeDir="false" afterPath="$PROJECT_DIR$/../SRC stuff/ft_lstsize.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="5XVzI7Oa" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3JcKl6GVvwYQLMNsc5iW1YWdwtH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.ft_atoi.c.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.ft_memmove.c.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.ft_putendl_fd.c.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.ft_strchr.c.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.ft_strjoin.c.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.ft_strrchr.c.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mrx/42-Common-Core&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="C/C++ File.ft_putendl_fd.c">
+    <configuration name="ft_atoi.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42-Common-Core" TARGET_NAME="ft_atoi.c" CONFIG_NAME="ft_atoi.c">
+      <option name="sourceFile" value="ft_atoi.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ft_putendl_fd.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42-Common-Core" TARGET_NAME="ft_putendl_fd.c" CONFIG_NAME="ft_putendl_fd.c">
+      <option name="sourceFile" value="ft_putendl_fd.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ft_strchr.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42-Common-Core" TARGET_NAME="ft_strchr.c" CONFIG_NAME="ft_strchr.c">
+      <option name="sourceFile" value="ft_strchr.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ft_strjoin.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42-Common-Core" TARGET_NAME="ft_strjoin.c" CONFIG_NAME="ft_strjoin.c">
+      <option name="sourceFile" value="ft_strjoin.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ft_strrchr.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42-Common-Core" TARGET_NAME="ft_strrchr.c" CONFIG_NAME="ft_strrchr.c">
+      <option name="sourceFile" value="ft_strrchr.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.ft_putendl_fd.c" />
+        <item itemvalue="C/C++ File.ft_strjoin.c" />
+        <item itemvalue="C/C++ File.ft_atoi.c" />
+        <item itemvalue="C/C++ File.ft_strrchr.c" />
+        <item itemvalue="C/C++ File.ft_strchr.c" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d16f9536-c1f9-4a9b-b33c-ebd007730e0e" name="Changes" comment="" />
+      <created>1789955066829</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789955066829</updated>
+      <workItem from="1789955068106" duration="11425000" />
+      <workItem from="1789976897455" duration="3811000" />
+      <workItem from="1790014471958" duration="9421000" />
+      <workItem from="1790084568542" duration="39000" />
+      <workItem from="1790084677932" duration="34000" />
+      <workItem from="1790145568192" duration="725000" />
+      <workItem from="1790146377942" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

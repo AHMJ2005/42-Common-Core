@@ -11,95 +11,83 @@
 /* ************************************************************************** */
 
 
-#include <stdlib.h>
+#include "libft.h"
 
-//charset set of characters as separators
-//return 1 if character is within charset, else 0
-static int	is_charset(char c, char *charset)
+static size_t	count_words(char const *s, char c)
 {
-	while (*charset)
-	{
-		if (c == *charset)
-			return (1);
-		charset++;
-	}
-	return (0);
-}
+	size_t	count;
+	int		in_word;
 
-static int	word_count(char *str, char *charset)
-{
-	int	i;
-	int	count;
-
-	i = 0;
 	count = 0;
-	while (str[i])
+	in_word = 0;
+	while (*s)
 	{
-		while (is_charset(str[i], charset))
-			i++;
-		if (str[i])
+		if (*s != c && !in_word)
 		{
+			in_word = 1;
 			count++;
-			while (!is_charset(str[i], charset) && str[i])
-				i++;
 		}
+		else if (*s == c)
+			in_word = 0;
+		s++;
 	}
 	return (count);
 }
 
-static int	count_word_len(char *str, char *charset)
+static void	free_all(char **tab, size_t i)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] && !is_charset(str[i], charset))
-		i++;
-	return (i);
+	while (i > 0)
+	{
+		i--;
+		free(tab[i]);
+	}
+	free(tab);
 }
 
-static char	*add_word(char *str, int len)
+static char	*word_dup(char const *s, size_t start, size_t end)
 {
 	char	*word;
-	int		i;
+	size_t	i;
 
-	word = (char *)malloc(sizeof(char) * (len + 1));
+	word = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!word)
-		return (0);
+		return (NULL);
 	i = 0;
-	while (i < len)
-	{
-		word[i] = str[i];
-		i++;
-	}
+	while (start < end)
+		word[i++] = s[start++];
 	word[i] = '\0';
 	return (word);
 }
 
-char	**ft_split(char *str, char *charset)
+char	**ft_split(char const *s, char c)
 {
-	char	**result;
-	int		i;
-	int		j;
-	int		word_len;
+	char	**tab;
+	size_t	i;
+	size_t	j;
+	int		start;
 
-	result = (char **)malloc(sizeof(char *) * (word_count(str, charset) + 1));
-	if (!result)
-		return (0);
+	if (!s)
+		return (NULL);
+	tab = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!tab)
+		return (NULL);
 	i = 0;
 	j = 0;
-	while (str[i] != '\0')
+	start = -1;
+	while (i <= ft_strlen(s))
 	{
-		while (is_charset(str[i], charset))
-			i++;
-		word_len = count_word_len(str + i, charset);
-		if (word_len)
+		if (s[i] != c && start < 0)
+			start = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && start >= 0)
 		{
-			result[j] = add_word(str + i, word_len);
+			tab[j] = word_dup(s, start, i);
+			if (!tab[j])
+				return (free_all(tab, j), NULL);
 			j++;
+			start = -1;
 		}
-		i += word_len;
-		word_len = 0;
+		i++;
 	}
-	result[j] = 0;
-	return (result);
+	tab[j] = NULL;
+	return (tab);
 }

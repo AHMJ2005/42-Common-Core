@@ -1,77 +1,29 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/22 10:18:39 by aabu-jwe          #+#    #+#             */
-/*   Updated: 2026/09/22 10:18:41 by aabu-jwe         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-int	get_total_len(int size, char **strs, char *sep)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    int	total;
-    int	sep_len;
-    int	i;
+    char	*str;
+    size_t	s1_len;
+    size_t	s2_len;
+    size_t	i;
+    size_t	j;
 
-    sep_len = ft_strlen(sep);
-    total = 0;
+    if (!s1 || !s2)
+        return (NULL);
+    s1_len = ft_strlen(s1);
+    s2_len = ft_strlen(s2);
+    str = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
+    if (!str)
+        return (NULL);
     i = 0;
-    while (i < size)
+    while (s1[i] != '\0')
     {
-        total += ft_strlen(strs[i]);
-        if (i < size - 1)
-            total += sep_len;
+        str[i] = s1[i];
         i++;
     }
-    return (total + 1);
+    j = 0;
+    while (s2[j] != '\0')
+        str[i++] = s2[j++];
+    str[i] = '\0';
+    return (str);
 }
-
-void	append_str(char *dest, int *c, char *src)
-{
-    int	i;
-
-    i = 0;
-    while (src[i] != '\0')
-    {
-        dest[*c] = src[i];
-        (*c)++;
-        i++;
-    }
-}
-
-char	*ft_strjoin(int size, char **strs, char *sep)
-{
-    char	*res;
-    int		total_len;
-    int		c;
-    int		i;
-
-    if (size <= 0)
-    {
-        res = malloc(sizeof(char));
-        if (res)
-            res[0] = '\0';
-        return (res);
-    }
-    total_len = get_total_len(size, strs, sep);
-    res = malloc(sizeof(char) * total_len);
-    if (!res)
-        return (0);
-    c = 0;
-    i = 0;
-    while (i < size)
-    {
-        append_str(res, &c, strs[i]);
-        if (i < size - 1)
-            append_str(res, &c, sep);
-        i++;
-    }
-    res[c] = '\0';
-    return (res);
-}
-
