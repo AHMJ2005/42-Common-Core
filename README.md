@@ -214,6 +214,7 @@ cc -Wall -Wextra -Werror main.c libft.a -o my_program
 * AI was utilized as a thought partner to verify edge-case memory safety (such as overlap prevention in `ft_memmove`, bounds handling in `ft_strlcat`, and memory cleanup handling on allocation failures in `ft_lstmap`).
 * AI assisted in designing comprehensive assertion test suites to validate heap allocations, file descriptor redirections, and Valgrind leak safety.
 EOF
+* main.c test to check all my functions. 
 
 
 
