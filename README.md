@@ -1,4 +1,3 @@
-Here is the complete, subject-compliant `README.md` file tailored with your 42 intra login (`aabu-jwe`), ready to copy into your repository root:
 
 ```markdown
 *This project has been created as part of the 42 curriculum by aabu-jwe.*
