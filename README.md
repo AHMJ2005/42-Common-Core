@@ -1,4 +1,6 @@
-Markdown
+Here is the complete, subject-compliant `README.md` file tailored with your 42 intra login (`aabu-jwe`), ready to copy into your repository root:
+
+```markdown
 *This project has been created as part of the 42 curriculum by aabu-jwe.*
 
 # Libft
@@ -35,48 +37,74 @@ The project includes a standard `Makefile` that compiles the library using `cc` 
 - Compile mandatory functions into `libft.a`:
   ```bash
   make
-Compile both mandatory and bonus linked-list functions:
 
-Bash
+```
+
+* Compile both mandatory and bonus linked-list functions:
+```bash
 make bonus
-Clean intermediate object files (.o):
 
-Bash
+```
+
+
+* Clean intermediate object files (`.o`):
+```bash
 make clean
-Remove all object files and the compiled archive (libft.a):
 
-Bash
+```
+
+
+* Remove all object files and the compiled archive (`libft.a`):
+```bash
 make fclean
-Perform a complete clean rebuild:
 
-Bash
+```
+
+
+* Perform a complete clean rebuild:
+```bash
 make re
-Usage
-Include libft.h in your source files and link the archive when compiling your project:
 
-Include the header:
+```
 
-C
+
+
+### Usage
+
+Include `libft.h` in your source files and link the archive when compiling your project:
+
+1. Include the header:
+```c
 #include "libft.h"
-Compile and link:
 
-Bash
+```
+
+
+2. Compile and link:
+```bash
 cc -Wall -Wextra -Werror main.c libft.a -o my_program
-Resources
-References & Documentation:
 
-Standard UNIX manual pages: man 3 malloc, man 3 string, man 3 stddef.
+```
 
-POSIX IEEE Std 1003.1 reference specifications for memory and pointer semantics.
 
-GNU C Library (glibc) source reference for standard boundary edge cases.
 
-AI Usage:
+---
 
-AI was utilized as a thought partner to verify edge-case memory safety (such as overlap prevention in ft_memmove, bounds handling in ft_strlcat, and memory cleanup handling on allocation failures in ft_lstmap).
+## Resources
 
-AI assisted in designing comprehensive assertion test suites to validate heap allocations, file descriptor redirections, and Valgrind leak safety.
+* **References & Documentation:**
+* Standard UNIX manual pages: `man 3 malloc`, `man 3 string`, `man 3 stddef`.
+* POSIX IEEE Std 1003.1 reference specifications for memory and pointer semantics.
+* GNU C Library (glibc) source reference for standard boundary edge cases.
 
+
+* **AI Usage:**
+* AI was utilized as a thought partner to verify edge-case memory safety (such as overlap prevention in `ft_memmove`, bounds handling in `ft_strlcat`, and memory cleanup handling on allocation failures in `ft_lstmap`).
+* AI assisted in designing comprehensive assertion test suites to validate heap allocations, file descriptor redirections, and Valgrind leak safety.
+
+
+
+```
 
 ---
 
@@ -122,45 +150,74 @@ The project includes a standard `Makefile` that compiles the library using `cc` 
 - Compile mandatory functions into `libft.a`:
   ```bash
   make
-Compile both mandatory and bonus linked-list functions:
 
-Bash
+```
+
+* Compile both mandatory and bonus linked-list functions:
+```bash
 make bonus
-Clean intermediate object files (.o):
 
-Bash
+```
+
+
+* Clean intermediate object files (`.o`):
+```bash
 make clean
-Remove all object files and the compiled archive (libft.a):
 
-Bash
+```
+
+
+* Remove all object files and the compiled archive (`libft.a`):
+```bash
 make fclean
-Perform a complete clean rebuild:
 
-Bash
+```
+
+
+* Perform a complete clean rebuild:
+```bash
 make re
-Usage
-Include libft.h in your source files and link the archive when compiling your project:
 
-Include the header:
+```
 
-C
+
+
+### Usage
+
+Include `libft.h` in your source files and link the archive when compiling your project:
+
+1. Include the header:
+```c
 #include "libft.h"
-Compile and link:
 
-Bash
+```
+
+
+2. Compile and link:
+```bash
 cc -Wall -Wextra -Werror main.c libft.a -o my_program
-Resources
-References & Documentation:
 
-Standard UNIX manual pages: man 3 malloc, man 3 string, man 3 stddef.
+```
 
-POSIX IEEE Std 1003.1 reference specifications for memory and pointer semantics.
 
-GNU C Library (glibc) source reference for standard boundary edge cases.
 
-AI Usage:
+---
 
-AI was utilized as a thought partner to verify edge-case memory safety (such as overlap prevention in ft_memmove, bounds handling in ft_strlcat, and memory cleanup handling on allocation failures in ft_lstmap).
+## Resources
 
-AI assisted in designing comprehensive assertion test suites to validate heap allocations, file descriptor redirections, and Valgrind leak safety.
+* **References & Documentation:**
+* Standard UNIX manual pages: `man 3 malloc`, `man 3 string`, `man 3 stddef`.
+* POSIX IEEE Std 1003.1 reference specifications for memory and pointer semantics.
+* GNU C Library (glibc) source reference for standard boundary edge cases.
+
+
+* **AI Usage:**
+* AI was utilized as a thought partner to verify edge-case memory safety (such as overlap prevention in `ft_memmove`, bounds handling in `ft_strlcat`, and memory cleanup handling on allocation failures in `ft_lstmap`).
+* AI assisted in designing comprehensive assertion test suites to validate heap allocations, file descriptor redirections, and Valgrind leak safety.
 EOF
+
+
+
+```
+
+```
