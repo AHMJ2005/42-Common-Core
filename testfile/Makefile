@@ -6,7 +6,7 @@
 #    By: aabu-jwe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/23 11:42:00 by aabu-jwe          #+#    #+#              #
-#    Updated: 2026/09/23 11:42:00 by aabu-jwe         ###   ########.fr        #
+#    Updated: 2026/09/29 16:38:02 by aabu-jwe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,10 +50,8 @@ SRCS        = ft_isalpha.c \
               ft_putchar_fd.c \
               ft_putstr_fd.c \
               ft_putendl_fd.c \
-              ft_putnbr_fd.c
-
-# Bonus Sources
-BONUS_SRCS  = ft_lstnew.c \
+              ft_putnbr_fd.c \
+              ft_lstnew.c \
               ft_lstadd_front.c \
               ft_lstsize.c \
               ft_lstlast.c \
@@ -63,23 +61,19 @@ BONUS_SRCS  = ft_lstnew.c \
               ft_lstiter.c \
               ft_lstmap.c
 
-# Object Files
+
 OBJS        = $(SRCS:.c=.o)
-BONUS_OBJS  = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
-# Compile library with mandatory objects
+
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-# Pattern rule for object compilation
+
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Bonus target: updates the archive with bonus objects without unnecessary relinks
-bonus: $(OBJS) $(BONUS_OBJS)
-	$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)
@@ -90,3 +84,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all bonus clean fclean re
+
