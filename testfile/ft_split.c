@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_countword(char const *s, char c)
+static size_t	ft_countword(char const *s, char c)
 {
 	size_t	count;
 
@@ -30,7 +30,7 @@ size_t	ft_countword(char const *s, char c)
 	return (count);
 }
 
-char	**ft_free_all(char **lst, int i)
+static char	**ft_free_all(char **lst, int i)
 {
 	while (i >= 0)
 	{
@@ -41,7 +41,7 @@ char	**ft_free_all(char **lst, int i)
 	return (NULL);
 }
 
-size_t	ft_wordlen(char const *s, char c)
+static size_t	ft_wordlen(char const *s, char c)
 {
 	size_t	len;
 
@@ -51,7 +51,7 @@ size_t	ft_wordlen(char const *s, char c)
 	return (len);
 }
 
-int	ft_fill_words(char **lst, char const *s, char c)
+static int	ft_fill_words(char **lst, char const *s, char c)
 {
 	size_t	len;
 	int		i;
