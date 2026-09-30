@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	get_size_num(long nq)
+static int	get_size_num(long nq)
 {
 	int	len;
 
